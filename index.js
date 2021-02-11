@@ -19,8 +19,13 @@ mongoose
     // Before adding any documents to the database, let's delete all previous entries
     return self.connection.dropDatabase();
   })
-  .then(() => {
-    // Run your code here, after you have insured that the connection was made
+  .then((function(value) {
+    console.log(value);
+    throw 'oh no!',
+  }).catch (function(e) {
+    then.(function)
+  }) => {
+    
   })
   .catch(error => {
     console.error('Error connecting to the database', error);
